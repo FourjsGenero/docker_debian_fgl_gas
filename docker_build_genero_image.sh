@@ -56,7 +56,7 @@ GAS_PACKAGE=${GAS_PACKAGE:-$(ls -tr fjs-gas-*l64xl212.run | tail -n 1)}
 [ -z "${GAS_PACKAGE}" ] && fail "No gas package provided. GAS_PACKAGE environment variable is missing."
 
 cp ${FGLGWS_PACKAGE} fglgws-install.run ||  fail "Failed to copy ${FGLGWS_PACKAGE} to ./fglgws-install.run"
-cp ${GAS_PACKAGE} gas-install.run ||  fail "Failed to copy ${GAS_PACKAGE} to ./fglgws-install.run"
+cp ${GAS_PACKAGE} gas-install.run ||  fail "Failed to copy ${GAS_PACKAGE} to ./gas-install.run"
 
 ##### Generate the password file
 htpasswd -cb apache-auth gasadmin ${GASADMIN_PASSWD}
